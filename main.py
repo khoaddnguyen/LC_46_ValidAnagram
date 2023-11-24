@@ -1,5 +1,14 @@
 def isAnagram(self, s: str, t: str) -> bool:
-    if len(s) != len(t)
+    # METHOD 1:
+    # return Counter(s) == Counter(t)
+
+
+    # METHOD 2, time O(n). memory O(1)
+    # sorted string
+    # return sorted(s) == sorted(t)
+
+    # METHOD 3, time and memory are O(n)
+    if len(s) != len(t):
         return False
 
     countS, countT = {}, {}
@@ -16,4 +25,5 @@ def isAnagram(self, s: str, t: str) -> bool:
             return False
 
     return True
+
 
